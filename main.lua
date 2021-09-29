@@ -1,27 +1,13 @@
-message = 2
+message = 0
 
-function increaseMessage(i)
-    message = message + i
+testScores = {99, 69, 42}
+testScores.subject = "Science"
+
+for i, s in ipairs(testScores) do
+    message = message + s
 end
 
---This function double param value
-function double(val)
-    val = val * 2
-    return val
-end
-
-function getHalf(val)
-    local var = val
-    var = var / 2
-    return var
-end
-
-message = double(message)
-
---[[
-    This function draws
-]]--
 function love.draw() 
     love.graphics.setFont(love.graphics.newFont(50))
-    love.graphics.print(message)
+    love.graphics.print(testScores)
 end
